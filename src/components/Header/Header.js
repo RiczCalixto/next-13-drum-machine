@@ -1,14 +1,13 @@
 "use client";
-import React, { useContext } from "react";
+import React from "react";
 import { Volume2, VolumeX } from "react-feather";
 
 import VisuallyHidden from "../VisuallyHidden";
 import MaxWidthWrapper from "../MaxWidthWrapper";
 import styles from "./Header.module.css";
-import { SoundContext } from "../SoundContext/SoundContext";
 
 function Header() {
-  const { soundEnabled, toggleSound } = useContext(SoundContext);
+  const { soundEnabled, toggleSound } = useSound();
 
   return (
     <header className={styles.wrapper}>

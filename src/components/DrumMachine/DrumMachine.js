@@ -1,15 +1,14 @@
 "use client";
-import React, { useContext } from "react";
+import React from "react";
 import useSound from "use-sound";
 import useKeypress from "react-use-keypress";
 
 import styles from "./DrumMachine.module.css";
-import { SoundContext } from "../SoundContext/SoundContext";
 
 const SOUND_SRC = "/909-drums.mp3";
 
 function DrumMachine() {
-  const { soundEnabled } = useContext(SoundContext);
+  const { soundEnabled } = useSound();
   const [play] = useSound(SOUND_SRC, {
     sprite: {
       kick: [0, 350],
